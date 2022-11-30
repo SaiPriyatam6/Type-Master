@@ -1,0 +1,35 @@
+<nav class="navbar navbar-expand-xl navbar-dark bg-dark p-2">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#" >schoolBase</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+        aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-link active" aria-current="page" href="/home"><i class="fas fa-home" style="color: white;">&nbsp</i>Home</a>
+          <a class="nav-link" href="#"><i class="fas fa-users"></i>Class</a>
+          <!-- <div class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+              data-bs-toggle="dropdown" aria-expanded="false">
+              Popular
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <li><a class="dropdown-item" href="#">class 6</a></li>
+              <li><a class="dropdown-item" href="#">class 7</a></li>
+              <li><a class="dropdown-item" href="#">class 8</a></li>
+            </ul>
+          </div> -->
+        </div>
+        <div class="navbar-nav ms-auto">
+          <%  if(!currentUser) {%>
+            <a href="/users/login" class="nav-link">Login</a>
+            <a href="/users/register" class="nav-link">Signup</a>
+            <% } else { %>
+              <a href="/settings" class="nav-link"><i class="fas fa-cog fa-spin"></i>Settings</a>
+              <a href="/users/logout" class="nav-link"><i class="fas fa-sign-out-alt fa-2x"></i></a>
+              <% } %>
+        </div>
+      </div>
+    </div>
+  </nav>
